@@ -29,7 +29,7 @@ for lapack in lapack openblas; do
     esac
 
     if [ ! -f "qemu-${qemu_arch}-static" ]; then
-      wget -N https://github.com/multiarch/qemu-user-static/releases/download/v3.0.0/x86_64_qemu-${qemu_arch}-static.tar.gz
+      wget -N https://github.com/multiarch/qemu-user-static/releases/download/v4.1.0-1/x86_64_qemu-${qemu_arch}-static.tar.gz
       tar -xvf x86_64_qemu-${qemu_arch}-static.tar.gz
     fi
 

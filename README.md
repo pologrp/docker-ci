@@ -8,24 +8,21 @@ isolated environments that contain dependencies of [`POLO`][polo].
 
 ### Image Details
 
-All images use [Alpine][alpine] as the base, which is a lightweight Linux
-distribution based on [musl libc][musl] and [busybox][busybox], and build
+All images use the `stretch-slim` [Debian][debian] image as the base and build
 
   - [`cmake v3.9.0`][cmake],
-  - [`libzmq v4.2.5`][libzmq],
+  - [`libzmq v4.3.2`][libzmq],
   - [`cereal v1.2.2`][cereal], and,
-  - [`gtest v1.8.1`][gtest]
+  - [`gtest v1.10.0`][gtest]
 
 from source. `Dockerfile.lapack` and `Dockerfile.openblas` differ from each
 other in the LAPACK implementation they install. `Dockerfile.lapack` installs
 the [reference LAPACK][lapack] (`v3.8.0`) implementation, whereas
-`Dockerfile.openblas` installs the [OpenBLAS][openblas] (`v0.3.3`) variant.
+`Dockerfile.openblas` installs the [OpenBLAS][openblas] (`v0.3.6`) variant.
 
 All images support `amd64`, `arm32v6` and `arm64v8` architectures.
 
-[alpine]: https://www.alpinelinux.org/
-[musl]: https://www.musl-libc.org/
-[busybox]: https://www.busybox.net/
+[debian]: https://hub.docker.com/_/debian
 [cmake]: https://cmake.org/
 [libzmq]: https://github.com/zeromq/libzmq
 [cereal]: https://github.com/USCilab/cereal
